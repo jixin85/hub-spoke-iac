@@ -6,17 +6,19 @@
             "type": "string",
             "metadata": {
                 "description": "The admin user name for both the Windows and Linux virtual machines."
+                "vaule": "riji"
             }
         },
         "adminPassword": {
             "type": "securestring",
             "metadata": {
                 "description": "The admin password for both the Windows and Linux virtual machines."
+                "vaule": "Rick12345678"
             }
         },
         "windowsVMCount": {
             "type": "int",
-            "defaultValue": 0,
+            "defaultValue": 1,
             "metadata": {
                 "description": "The count of Windows virtual machines to create."
             }
