@@ -105,41 +105,47 @@
       "defaultValue": "[resourceGroup().location]"
     }
   ,
-  "vpnGateway": {
-    "value": {
-      "name": "vgw-gateway",
-      "subnetName": "GatewaySubnet",
-      "subnetPrefix": "10.0.2.0/27",
-      "pipName": "pip-vgw-gateway"
+    "vpnGateway": {
+      "type": "object",
+      "value": {
+        "name": "vgw-gateway",
+        "subnetName": "GatewaySubnet",
+        "subnetPrefix": "10.0.2.0/27",
+        "pipName": "pip-vgw-gateway"
+      }
+    },
+    "bastionHost": {
+      "type": "object",
+      "value": {
+        "name": "AzureBastionHost",
+        "publicIPAddressName": "pip-bastion",
+        "subnetName": "AzureBastionSubnet",
+        "nsgName": "nsg-hub-bastion",
+        "subnetPrefix": "10.0.1.0/29"
+      }
+    },
+    "azureFirewall": {
+      "type": "object",
+      "value": {
+        "name": "AzureFirewall",
+        "publicIPAddressName": "pip-firewall",
+        "subnetName": "AzureFirewallSubnet",
+        "subnetPrefix": "10.0.3.0/26",
+        "routeName": "r-nexthop-to-fw"
+      }
+    },
+    "workbookDisplayName": {
+      "type": "string",
+      "value": "Azure Firewall Workbook"
+    },
+    "workbookId": {
+      "type": "string",
+      "value": "[guid(resourceGroup().id)]"
+    },
+    "location": {
+      "type": "string",
+      "value": "[resourceGroup().location]"
     }
-  },
-  "bastionHost": {
-    "value": {
-      "name": "AzureBastionHost",
-      "publicIPAddressName": "pip-bastion",
-      "subnetName": "AzureBastionSubnet",
-      "nsgName": "nsg-hub-bastion",
-      "subnetPrefix": "10.0.1.0/29"
-    }
-  },
-  "azureFirewall": {
-    "value": {
-      "name": "AzureFirewall",
-      "publicIPAddressName": "pip-firewall",
-      "subnetName": "AzureFirewallSubnet",
-      "subnetPrefix": "10.0.3.0/26",
-      "routeName": "r-nexthop-to-fw"
-    }
-  },
-  "workbookDisplayName": {
-    "value": "Azure Firewall Workbook"
-  },
-  "workbookId": {
-    "value": "[guid(resourceGroup().id)]"
-  },
-  "location": {
-    "value": "[resourceGroup().location]"
-  }
 }
   ,
   "variables": {
