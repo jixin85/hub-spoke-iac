@@ -18,4 +18,5 @@ steps:
     location: 'Australia East'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/jixin85/hub-spoke-iac/main/azuredeploy.json'
+    csmParametersFileLink: 'https://raw.githubusercontent.com/jixin85/hub-spoke-iac/main/parameters.json'
     deploymentMode: 'Incremental'
