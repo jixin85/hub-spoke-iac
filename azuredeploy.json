@@ -4,7 +4,7 @@
     "parameters": {
         "adminUserName": {
             "type": "string",
-            "defaultvaule": riji,
+            "defaultvaule": "riji",
             "metadata": {
                 "description": "The admin user name for both the Windows and Linux virtual machines."
                 
@@ -12,7 +12,7 @@
         },
         "adminPassword": {
             "type": "securestring",
-            "defaultvaule": Rick12345678,
+            "defaultvaule": "Rick12345678",
             "metadata": {
                 "description": "The admin password for both the Windows and Linux virtual machines."
                 }
