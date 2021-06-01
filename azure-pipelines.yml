@@ -10,7 +10,6 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- task: 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
