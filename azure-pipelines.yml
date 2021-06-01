@@ -12,9 +12,11 @@ pool:
 steps:
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
-    deploymentScope: 'Subscription'
+    deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'internalsub'
     subscriptionId: 'ceec02da-7144-44d9-94a8-c528859c0e80'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'Deleteme'
     location: 'Australia East'
     templateLocation: 'URL of the file'
     csmFileLink: 'https://raw.githubusercontent.com/jixin85/hub-spoke-iac/main/azuredeploy.json'
