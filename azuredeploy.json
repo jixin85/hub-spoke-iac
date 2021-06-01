@@ -1,7 +1,7 @@
 {
     "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
     "contentVersion": "1.0.0.0",
-   "parameters": {
+  "parameters": {
     "adminUserName": {
       "value": "riji"
     },
@@ -80,20 +80,20 @@
       "value": "[resourceGroup().location]"
     }
   }
-},
-    "variables": {
-        "logAnalyticsWorkspace": "[uniqueString(subscription().subscriptionId, resourceGroup().id)]",
-        "peering-name-hub-to-spoke-one": "hub-to-spoke-one",
-        "peering-name-hub-to-spoke-two": "hub-to-spoke-two",
-        "peering-name-spoke-to-hub-one": "spoke-one-to-hub",
-        "peering-name-spoke-to-hub-two": "spoke-two-to-hub",
-        "nicNameWindows": "nic-windows-",
-        "vmNameWindows": "vm-windows-",
-        "windowsOSVersion": "2016-Datacenter",
-        "nicNameLinux": "nic-linux-",
-        "osVersion": "16.04.0-LTS",
-        "vmNameLinux": "vm-linux-"
-    },
+  ,
+  "variables": {
+    "logAnalyticsWorkspace": "[uniqueString(subscription().subscriptionId, resourceGroup().id)]",
+    "nicNameLinux": "nic-linux-",
+    "nicNameWindows": "nic-windows-",
+    "osVersion": "16.04.0-LTS",
+    "peering-name-hub-to-spoke-one": "hub-to-spoke-one",
+    "peering-name-hub-to-spoke-two": "hub-to-spoke-two",
+    "peering-name-spoke-to-hub-one": "spoke-one-to-hub",
+    "peering-name-spoke-to-hub-two": "spoke-two-to-hub",
+    "vmNameLinux": "vm-linux-",
+    "vmNameWindows": "vm-windows-",
+    "windowsOSVersion": "2016-Datacenter"
+  },
     "resources": [
         {
             "comments": "Log Analytics workspace",
