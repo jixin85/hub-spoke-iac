@@ -10,6 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: 
 - task: AzureResourceManagerTemplateDeployment@3
   inputs:
     deploymentScope: 'Subscription'
@@ -17,6 +18,5 @@ steps:
     subscriptionId: 'ceec02da-7144-44d9-94a8-c528859c0e80'
     location: 'Australia East'
     templateLocation: 'URL of the file'
-    csmFileLink: 'https://raw.githubusercontent.com/jixin85/hub-spoke-iac/main/azuredeploy.json?token=AHIKVXSRRJ6JHBMZT4FVYXTAWXFAM'
+    csmFileLink: https://raw.githubusercontent.com/jixin85/hub-spoke-iac/main/azuredeploy.json?token=AHIKVXSRRJ6JHBMZT4FVYXTAWXFAM
     deploymentMode: 'Incremental'
-    deploymentName: 'test'
