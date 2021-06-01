@@ -6,14 +6,14 @@
             "type": "string",
             "metadata": {
                 "description": "The admin user name for both the Windows and Linux virtual machines."
-                "vaule": riji
+                "defaultvaule": riji
             }
         },
         "adminPassword": {
             "type": "securestring",
             "metadata": {
                 "description": "The admin password for both the Windows and Linux virtual machines."
-                "vaule": Rick12345678
+                "defaultvaule": Rick12345678
             }
         },
         "windowsVMCount": {
