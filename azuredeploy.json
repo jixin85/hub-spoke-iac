@@ -4,17 +4,18 @@
     "parameters": {
         "adminUserName": {
             "type": "string",
+            "defaultvaule": riji,
             "metadata": {
                 "description": "The admin user name for both the Windows and Linux virtual machines."
-                "defaultvaule": riji
+                
             }
         },
         "adminPassword": {
             "type": "securestring",
+            "defaultvaule": Rick12345678,
             "metadata": {
                 "description": "The admin password for both the Windows and Linux virtual machines."
-                "defaultvaule": Rick12345678
-            }
+                }
         },
         "windowsVMCount": {
             "type": "int",
